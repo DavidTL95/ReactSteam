@@ -1,18 +1,39 @@
-import React from 'react'
-import './DealCard.css'
+import React from "react";
+import "./DealCard.css";
+// import "./DealCard.scss";
+import { Button, Card } from "react-bootstrap";
 
-export const DealCard = () => {
+export const DealCard = ({ title, score, imagen, precioOriginal, precio, descuento}) => {
+
+  var style = {
+    backgroundImage: `url(${imagen})`,
+  };
+
   return (
-        <div className='card'>
-            <div className="box">
-                <div className="content">
-                    <h2>01</h2>
-                    <h3>Card</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quos, atque repudiandae porro quae perferendis optio illum molestias doloremque cumque esse eaque adipisci rem modi voluptatem labore, repellat dolorum libero.</p>
-
-                    <a href="#">Link</a>
+    <main className="container">
+        <article className="card">
+            <img src={imagen} alt="Imagen videojuego" className="card-header"/>
+            <div className="card-body">
+                <div className="card-body-contentimg">
+                    <h2 className="card-body-contentimg-h2">{score}</h2>
+                </div>
+                <h2 className="card-body-title">{title}</h2>
+            </div>
+            <div className="card-footer">
+                <div className="card-footer-precio">
+                    <h3>Precio original</h3>
+                    <h4>{precioOriginal}$</h4>
+                </div>
+                <div className="card-footer-precio">
+                    <h3>Precio rebajado</h3>
+                    <h4>{precio}$</h4>
+                </div>
+                <div className="card-footer-precio descuento">
+                    <h3>Descuento</h3>
+                    <h4>{Math.round(descuento)}%</h4>
                 </div>
             </div>
-        </div>
-  )
-}
+        </article>
+    </main>
+  );
+};

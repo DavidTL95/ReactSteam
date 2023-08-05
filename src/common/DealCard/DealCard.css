@@ -1,83 +1,82 @@
-.card{
-    position: relative;
-
-    width: 20%;
-    height: 450px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px -5px rgba(255, 255, 255, 0.5), 5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px -5px rgba(255, 255, 255, 0.5);
-    border-radius: 15px;
-    margin: 30px;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-.box{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
-    background: #ebf5fc;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-.content{
-    padding: 20px;
-    text-align: center;
-    h2{
-        position: absolute;
-        top: -10px;
-        right: 30px;
-        font-size: 8em;
-        color: rgba(0, 0, 0, 0.02);
-        transition: 0.5s;
-    }
-    h3{
-        font-size: 1.8em;
-        color: #777;
-        z-index: 1;
-        transition: 0.4s;
-    }
-    p{
-        font-size: 16px;
-        font-weight: 300 !important;
-        color: #777;
-        z-index: 1;
-        transition: 0.4s;
-    }
-    a{
-        position: relative;
-        display: inline-block;
-        padding: 8px 20px;
-        background: #03a9f4;
-        margin-top: 15px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-weight: 400;
-        color: #fff;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-} 
-
-.card:hover .box{
-    transform: translateY(-50px);
-    transition: 0.5s;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    background: linear-gradient(45deg, #b95ce4, #e91e63);
-    background: linear-gradient(45deg, #b95ce4, #4f29cd);
+body {
+  font-family: sans-serif;
+  color: #FFFFFF;
 }
 
-.card:hover h2{
-    color: rgba(0, 0, 0, 0.5);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.card:hover h3 p{
-    color: rgba(0, 0, 0, 0.05);
+.card {
+  background-color: #1E1E1E;
+  width: 350px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card-header {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #FFFFFF;
+}
+.card-body-title {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.card-body-contentimg {
+  width: 20%;
+  border: 5px solid #0085ff;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  box-shadow: 0px -10px 20px #3cb4df;
+  margin-top: -20px;
+  color: #51cd3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin: 1rem;
+  gap: 1rem;
+}
+.card-footer-precio {
+  text-align: center;
+  margin-top: 2rem;
+  border-right: 1px solid #FFFFFF;
 }
 
-.card:hover a{
-    background: #ff568f;
-
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.5s;
 }
+
+.descuento {
+  border-right: none;
+}/*# sourceMappingURL=DealCard.css.map */
