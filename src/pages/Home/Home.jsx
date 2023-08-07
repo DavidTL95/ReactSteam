@@ -4,8 +4,13 @@ import { DealCard } from "../../common/DealCard/DealCard";
 import { Col, Container, Row } from "react-bootstrap";
 import './Home.css'
 import { useDebounce } from "use-debounce";
+import { useSelector } from "react-redux";
+import { searchData } from "../searchSlice";
 
-const Home = () => {
+export const Home = () => {
+
+  const searchReduxData = useSelector(searchData);
+
   const [deals, setDeals] = useState([]);
   const [search, setSearch] = useState("");
   const [debounceSearch] = useDebounce(search, 750);
@@ -59,6 +64,7 @@ const Home = () => {
                   precioOriginal={deal.normalPrice}
                   precio={deal.salePrice}
                   descuento={deal.savings}
+                  id={deal.gameID}
                 />
               </Col>
             );

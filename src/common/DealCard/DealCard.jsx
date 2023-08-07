@@ -2,12 +2,15 @@ import React from "react";
 import "./DealCard.css";
 // import "./DealCard.scss";
 import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
-export const DealCard = ({ title, score, imagen, precioOriginal, precio, descuento}) => {
+export const DealCard = ({ title, score, imagen, precioOriginal, precio, descuento, id}) => {
 
   var style = {
     backgroundImage: `url(${imagen})`,
   };
+
+  const navigate = useNavigate();
 
   return (
     <main className="container">
@@ -33,6 +36,7 @@ export const DealCard = ({ title, score, imagen, precioOriginal, precio, descuen
                     <h4>{Math.round(descuento)}%</h4>
                 </div>
             </div>
+            <Button onClick={() => navigate(`/detail/${id}`)}>Detail</Button>
         </article>
     </main>
   );
