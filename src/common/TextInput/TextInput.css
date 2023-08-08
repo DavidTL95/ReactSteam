@@ -1,0 +1,27 @@
+.buscador{
+    width: 15rem;
+    height: 3rem;
+
+    border: 2px solid white;
+    border-radius: 10px;
+
+    background: #111;
+
+    color: white;
+    text-align: center; 
+}
+
+.buscador:focus{
+    width: 16rem;
+    height: 3rem;
+
+    border: 3px solid white;
+
+    box-shadow: 0px 0px 18px white;
+}
+
+.buscador::placeholder {
+    text-align: center; 
+
+    color: white;
+ }

@@ -16,6 +16,7 @@ export const getDeals = async () => {
 }
 
 export const getDealsByTitle = async (title) => {
+
     let res = await axios.get(URLByTitle+title);
 
     // console.log(res.data);

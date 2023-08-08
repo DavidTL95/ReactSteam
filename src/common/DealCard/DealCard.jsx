@@ -36,7 +36,6 @@ export const DealCard = ({ title, score, imagen, precioOriginal, precio, descuen
                     <h4>{Math.round(descuento)}%</h4>
                 </div>
             </div>
-            <Button onClick={() => navigate(`/detail/${id}`)}>Detail</Button>
         </article>
     </main>
   );
