@@ -36,8 +36,8 @@ const Header = () => {
 
   return (
     <Container fluid className='contenedorHeader' xs={12} md={12} xl={12}>
-    <TextInput className='search' name="search" type="text" placeholder="Search..." state = {setSearchInfo}/>
-</Container>
+    {/* <TextInput className='search' name="search" type="text" placeholder="Search..." state = {setSearchInfo}/> */}
+    </Container>
   )
 }
 

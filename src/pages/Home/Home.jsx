@@ -14,7 +14,7 @@ export const Home = () => {
   const [deals, setDeals] = useState([]);
 
 //BÚSQUEDA REDUX
-  const searchReduxData = useSelector(searchData);
+  // const searchReduxData = useSelector(searchData);
 
 //BÚSQUEDA LOCAL
   const [search, setSearch] = useState("");
@@ -25,36 +25,35 @@ export const Home = () => {
 
 //BÚSQUEDA REDUX
 
-  useEffect(() => {
-    if (searchReduxData.findings.length === 0) {
-      getDeals()
-        .then((res) => {
-          setDeals(res);
-        })
-        .catch((error) => console.log(error));
-    }
-  }, [searchReduxData]);
+  // useEffect(() => {
+  //   if (searchReduxData.findings.length === 0) {
+  //     getDeals()
+  //       .then((res) => {
+  //         setDeals(res);
+  //       })
+  //       .catch((error) => console.log(error));
+  //   }
+  // }, [searchReduxData]);
 
 
 //BÚSQUEDA LOCAL
 
-  // useEffect(() => {
-  //   if(debounceSearch){
-  //     getDealsByTitle(debounceSearch)
-  //     .then((res) => {
-  //       setDeals(res)
-  //     })
-  //   }else{
-  //     getDeals().then((res) => setDeals(res));
-  //   }
-  // }, [debounceSearch]);
+  useEffect(() => {
+    if(debounceSearch){
+      getDealsByTitle(debounceSearch)
+      .then((res) => {
+        setDeals(res)
+      })
+    }else{
+      getDeals().then((res) => setDeals(res));
+    }
+  }, [debounceSearch]);
 
 
-
-  // const inputHandler = ({target}) => {
-  //   const {value} = target;
-  //   setSearch(value);
-  // }
+  const inputHandler = ({target}) => {
+    const {value} = target;
+    setSearch(value);
+  }
 
 //FUNCIÓN DETAIL.
 
@@ -66,19 +65,19 @@ export const Home = () => {
   return (
     <Container fluid className="contenedorHome">
 
-{/* <Row className="d-flex justify-content-center m-2">
-                <Col className="d-flex justify-content-center" xs={10} md={6}>
-                    <input
-                    className="buscador"
-                    name="criteria"
-                    type="text"
-                    placeholder="Search a character"
-                    onChange={inputHandler}
-                    />
-                </Col>
-            </Row> */}
+<Row className="d-flex justify-content-center m-2">
+  <Col className="d-flex justify-content-center" xs={10} md={6}>
+      <input
+      className="buscador"
+      name="criteria"
+      type="text"
+      placeholder="Search a character"
+      onChange={inputHandler}
+      />
+  </Col>
+</Row>
       <Row className="contenedorTarjetas">
-        {searchReduxData.findings.length > 0 ? (
+        {/* {searchReduxData.findings.length > 0 ? (
           <>
             {searchReduxData.findings.map((deal) => {
               return (
@@ -103,7 +102,7 @@ export const Home = () => {
               );
             })}
           </>
-        ) : (
+        ) : ( */}
           <>
             {deals?.map((deal) => {
               return (
@@ -128,7 +127,7 @@ export const Home = () => {
               );
             })}
           </>
-        )}
+        {/* )} */}
       </Row>
     </Container>
   );

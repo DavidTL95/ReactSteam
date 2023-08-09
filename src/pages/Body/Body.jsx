@@ -9,6 +9,10 @@ export const Body = () => {
                 <Route path="*" element={<Navigate to="/"/>}/>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/detail" element={<Detail/>}/>
+                <Route path="/register" element={<Register/>}/>
+                <Route path="/profile" element={<Profile/>} />
+                <Route path="/detail" element={<Detail />} />
+                <Route path="/admin" element={<Admin/>}/>
             </Routes>
         </>
     )
