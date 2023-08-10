@@ -6,6 +6,9 @@ const URLByTitle = ('https://www.cheapshark.com/api/1.0/deals?title=')
 
 const URLByID = ('https://www.cheapshark.com/api/1.0/games?id=')
 
+const BASIC_API_URL = "http://localhost:3000";
+
+
 
 export const getDeals = async () => {
     let res = await axios.get(URL);
@@ -30,4 +33,46 @@ export const getDealsByID = async (id) => {
     console.log(res.data);
 
     return res.data;
+}
+
+export const logMe = async (body) => {
+
+    let res = {
+        token: "123456789ABCD",
+        name: "David",
+        id: 1,
+        age: 27,
+        rol: true
+    }
+
+    return res;
+}
+
+export const registerMe = async (body) => {
+
+    let {data} = await axios.post(`${BASIC_API_URL}/users`, body);
+
+    return data;
+}
+
+export const profileUser = async (id) => {
+
+    let {data} = await axios.get(`${BASIC_API_URL}/users/${id}`);
+
+    return data;
+}
+
+export const newOrder = async (productID, userID) => {
+    console.log(productID)
+
+    let body={
+        id:5,
+        userID: userID,
+        productID: productID,
+        date: "8/08/2023"
+    }
+
+    let {data} = await axios.post(`${BASIC_API_URL}/favorites`, body);
+
+    return data;
 }

@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { Drop } from "../../common/Drop/Drop";
+import { TextInput } from "../../common/TextInput/TextInput";
+import { Button } from "react-bootstrap";
+import { registerMe } from "../../services/apiCalls";
 
 export const Register = () => {
 
@@ -16,18 +19,18 @@ export const Register = () => {
 
     useEffect(() => {
         if(drop){
-            console.log("Hombre");
+            // console.log("Hombre");
         }else{
-            console.log("Mujer");
+            // console.log("Mujer");
         }
     }, [drop]);
 
     useEffect(() => {
-        console.log(userData)
+        // console.log(userData)
     }, [userData]);
 
     const keepData = () => {
-        register(userData)
+        registerMe(userData)
         .then(
             res => {
                 if(res.id !== 0){

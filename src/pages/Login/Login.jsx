@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom"
 import { TextInput } from "../../common/TextInput/TextInput";
+import { logMe } from "../../services/apiCalls";
+import { login, userData } from "../userSlice";
 
 
 export const Login = () => {
@@ -33,20 +35,20 @@ export const Login = () => {
     }, [userCredentials])
 
     const submitHandler = (e) => {
-        e.prevenDefault();
+        // e.prevenDefault();
 
-        //logMe(userCredentials) -- ESTO HAY QUE TRAERLO DESDE APICALLS
-        //.then((res) => {
-            //console.log(res);
-            //dispatch(login({credentials: res}))
+        logMe(userCredentials)
+        .then((res) => {
+            console.log(res);
+            dispatch(login({credentials: res}))
 
-            //setWelcome(res.name);
+            setWelcome(res.name);
 
-            //setTimeOut(() => {
-                //navigate("/")
-            //}, 4500)
-        //})
-        //.catch((error) => console.log(error));
+            setTimeOut(() => {
+                navigate("/")
+            }, 4500)
+        })
+        .catch((error) => console.log(error));
     }
 
     return(
