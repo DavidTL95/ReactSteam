@@ -20,14 +20,30 @@ export const Detail = () => {
 
   return (
     <>
-        <Container fluid>
-            <Row className="justify-content-center">
-                <Col xs={10} md={8} lg={6}>
-                    <p>{reduxDealData.title}</p>
-                    <p>{reduxDealData.metacriticScore}</p>
-                    <p>{reduxDealData.salePrice}</p>
-                </Col>
-            </Row>    
+        <Container fluid className="contenedorDetail" xs={10} md={8} lg={6}>
+                <div className="DetailCard">
+                    <img src={reduxDealData.thumb} alt="Imagen videojuego" className="DetailCard-header"/>
+                    <div className="DetailCard-body">
+                        <div className="DetailCard-body-contentimg">
+                            <p className="DetailCard-body-contentimg-h2">{reduxDealData.metacriticScore}</p>
+                        </div>
+                        <p className="DetailCard-body-title">{reduxDealData.title}</p>
+                    </div>
+                    <div className="DetailCard-footer">
+                        <div className="DetailCard-footer-precio preciOriginal">
+                            <h3>Precio original</h3>
+                            <h4>{reduxDealData.originalPrice}$</h4>
+                        </div>
+                    <div className="DetailCard-footer-precio precioRebajado">
+                        <h3>Precio rebajado</h3>
+                        <h4>{reduxDealData.salePrice}$</h4>
+                    </div>
+                    <div className="DetailCard-footer-precio descuento">
+                        <h3>Descuento</h3>
+                        <h4>{Math.round(reduxDealData.savings)}%</h4>
+                    </div>
+                    </div>
+                </div>
             {reduxUserData.credentials.token
                 ?(
                     <Row>
@@ -35,10 +51,14 @@ export const Detail = () => {
                     </Row>
                 ) : (
                     <Row>
-                        Ha petao todo.
+                        
                     </Row>    
                     )
                     }
+        
+
+
+
         </Container>
     </>
   )
