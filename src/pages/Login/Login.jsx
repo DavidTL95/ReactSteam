@@ -44,7 +44,7 @@ export const Login = () => {
 
             setWelcome(res.name);
 
-            setTimeOut(() => {
+            setTimeout(() => {
                 navigate("/")
             }, 4500)
         })

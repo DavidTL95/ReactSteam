@@ -6,6 +6,7 @@ import { Profile } from "../Profile/Profile";
 import { Admin } from "../Admin/Admin";
 import { Favorites } from "../../common/Favorites/Favorites";
 import { Login } from "../Login/Login";
+import { Fav } from "../Fav/Fav";
 
 export const Body = () => {
     return (
@@ -19,6 +20,7 @@ export const Body = () => {
                 <Route path="/admin" element={<Admin/>}/>
                 <Route path="/favorite" element={<Favorites/>}/>
                 <Route path="/login" element={<Login/>}/>
+                <Route path="/fav" element={<Fav/>}/>
             </Routes>
         </>
     )

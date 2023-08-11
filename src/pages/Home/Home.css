@@ -1,15 +1,72 @@
 .contenedorHome{
     display: flex;
+    flex-direction: column;
 
-    width: 90%;
-    height: 80%;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 60%;
 }
+
+.triangle {
+    position: relative;
+    background: #a3a6e57b;
+    height: 10vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 91px 91px 0 91px;
+    border-color: #a3a6e57b transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+  }
 
 .contenedorTarjetas{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    
-    gap: 3rem;
+    gap: 4rem;
+    margin-top: 10rem;
+    width: 90%;
+}
+
+.buscador{
+    border-radius: 30px;
+
+    height: 50%;
+    width: 20%;
+
+    background-color: rgba(255, 255, 255, 0.431);
+
+    font-size: 2rem;
+    text-align: center;
+    z-index: 0;
+
+    transition: 1s;
+}
+
+.buscador:focus{
+    height: 50%;
+    width: 35%;
+
+    border-radius: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.431);
+
+    font-size: 2rem;
+    text-align: center;
+
+    transition: 1s;
 }

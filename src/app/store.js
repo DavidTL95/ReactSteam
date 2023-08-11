@@ -11,11 +11,13 @@ import { combineReducers } from "redux"
 import { persistReducer } from "redux-persist";
 
 import thunk from "redux-thunk"
+import favSlice from "../pages/favSlice";
 
 const reducers = combineReducers({
     search: searchSlice,
     detail: detailSlice,
     user: userSlice,
+    fav: favSlice,
 });
 
 const persitConfig = {

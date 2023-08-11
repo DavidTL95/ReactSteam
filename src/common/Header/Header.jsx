@@ -9,8 +9,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getDealsByTitle } from '../../services/apiCalls';
 
 import { addFindings, deleteFindings } from '../../pages/searchSlice';
-import { userData } from '../../pages/userSlice';
+import { userData, userout } from '../../pages/userSlice';
 import { FavIcon } from '../FavIcon/FavIcon';
+
+import './Header.css'
 
 const Header = () => {
 
@@ -46,12 +48,10 @@ const Header = () => {
   // }, [searchInfo])
 
   return (
-    <Container fluid className='contenedorHeader' xs={12} md={12} xl={12}>
-      <Row className='justify-content-center py-5'>
-        <Col className='d-flex justify-content-center' xs={10} md={4} xl={4}></Col>
-        <Col className='d-flex justify-content-center' xs={10} md={4} xl={4}></Col>
-        <Col className='d-flex justify-content-end align-items-end' xs={10} md={4} xl={4}>
-          <Row>
+    <Container fluid xs={12} md={12} xl={12}>
+        <Col className='contenedorHeader' xs={10} md={4} xl={4}>
+          <Row className='contenedorImagen'></Row>
+          <Row className='contenedorPerfil'>
             {
               !datosCredencialesRedux.credentials?.token ? (
                 <>
@@ -66,13 +66,13 @@ const Header = () => {
                   {datosCredencialesRedux.credentials?.rol === true && (<Col className='linlDesign' onClick={()=>navigate("/admin")}>Admin</Col>)}
                   <Col className="linkDesign">{datosCredencialesRedux.credentials?.name}</Col>
                   <Col className="linkDesign" onClick={() => logOut()}>Logout</Col>
-                  <Col onClick={() => navigate("/cart")}><FavIcon/></Col>
+                  <Col onClick={() => navigate("/fav")}><FavIcon/></Col>
                 </>
               )
             }
           </Row>
+          <Row className='contenedorLinks'></Row>
         </Col>
-      </Row>
     </Container>
   )
 }

@@ -22,5 +22,5 @@ export const FavSlice = createSlice({
 });
 
 export const { add, remove } = FavSlice.actions;
-export const favData = (state) => state.cart;
+export const favData = (state) => state.fav;
 export default FavSlice.reducer;

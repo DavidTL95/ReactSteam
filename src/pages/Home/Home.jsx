@@ -5,7 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import "./Home.css";
 import { useDebounce } from "use-debounce";
 import { useDispatch, useSelector } from "react-redux";
-import { searchData } from "../searchSlice";
+// import { searchData } from "../searchSlice";
 import { useNavigate } from "react-router-dom";
 import { addDeal } from "../detailSlice";
 
@@ -63,18 +63,19 @@ export const Home = () => {
   };
 
   return (
-    <Container fluid className="contenedorHome">
+<Container fluid className="contenedorHome" xs={12} md={12} xl={12}>
 
-<Row className="d-flex justify-content-center m-2">
-  <Col className="d-flex justify-content-center" xs={10} md={6}>
-      <input
+  {<section className="triangle">
+  <input
       className="buscador"
       name="criteria"
       type="text"
-      placeholder="Search a character"
+      placeholder="Search..."
       onChange={inputHandler}
       />
-  </Col>
+    </section>}
+
+<Row>
 </Row>
       <Row className="contenedorTarjetas">
         {/* {searchReduxData.findings.length > 0 ? (

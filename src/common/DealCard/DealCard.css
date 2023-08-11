@@ -12,69 +12,100 @@ body {
   color: #FFFFFF;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
 .card {
-  background-color: #1E1E1E;
-  width: 350px;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #a3a6e57b;
   border-radius: 16px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 15px #dcdde67b;
   overflow: hidden;
   transition: 0.5s;
+
+  min-width: 350px;
+  min-height: 350px;
+  max-width: 350px;
+  max-height: 350px;
 }
+
 .card-header {
   width: 100%;
-  display: block;
+  height: 150px;
+  box-shadow: 2px 2px 15px #dcdde67b;
 }
+
 .card-body {
+  height: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid #FFFFFF;
 }
+
 .card-body-title {
-  margin-top: 1rem;
-  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  color: white;
+  font-weight: bold;
 }
+
 .card-body-contentimg {
   width: 20%;
-  border: 5px solid #0085ff;
+  height: 100%;
+  border: 5px solid #4e54c8;
   border-radius: 50%;
-  background-color: #FFFFFF;
+  background-color: #ffffffe0;
   box-shadow: 0px -10px 20px #3cb4df;
   margin-top: -20px;
   color: #51cd3b;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: bold;
 }
+
 .card-footer {
   display: flex;
+  height: 110px;
   justify-content: space-around;
   color: #FFFFFF;
   font-size: 1.5rem;
   margin: 1rem;
   gap: 1rem;
+  align-items: center;
 }
+
 .card-footer-precio {
   text-align: center;
   margin-top: 2rem;
   border-right: 1px solid #FFFFFF;
 }
 
+.precioRebajado{
+  color: #51cd3b;
+}
+
+.precioRebajado h3{
+  transform: translateY(-1rem);
+}
+
+.precioRebajado h4{
+  transform: translateY(-1rem);
+  font-size: 3rem;
+}
+
+.preciOriginal h4{
+  text-decoration: line-through;
+}
+
 .card:hover {
   transform: translateY(-20px);
   transition: 0.5s;
+  background-color: #7f83c6c1;
 }
 
 .descuento {

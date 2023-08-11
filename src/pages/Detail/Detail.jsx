@@ -2,15 +2,21 @@
 // import { useEffect, useState } from 'react'
 // import { useParams } from "react-router-dom"
 // import { getDealsByID } from "../../services/apiCalls"
-import { Col, Container, Row } from "react-bootstrap"
-import { useSelector } from 'react-redux'
+import { Button, Col, Container, Row } from "react-bootstrap"
+import { useDispatch, useSelector } from 'react-redux'
 import { dealData } from '../detailSlice'
 
 import './Detail.css'
+import { userData } from "../userSlice"
+import { add } from "../favSlice"
 
 export const Detail = () => {
 
     const reduxDealData = useSelector(dealData);
+
+    const reduxUserData = useSelector(userData);
+
+    const dispatch = useDispatch();
 
   return (
     <>
@@ -22,6 +28,17 @@ export const Detail = () => {
                     <p>{reduxDealData.salePrice}</p>
                 </Col>
             </Row>    
+            {reduxUserData.credentials.token
+                ?(
+                    <Row>
+                        <Button onClick={() => dispatch(add(reduxDealData.character))}>Add</Button>   
+                    </Row>
+                ) : (
+                    <Row>
+                        Ha petao todo.
+                    </Row>    
+                    )
+                    }
         </Container>
     </>
   )
