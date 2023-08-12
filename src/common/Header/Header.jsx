@@ -48,9 +48,10 @@ const Header = () => {
   // }, [searchInfo])
 
   return (
-    <Container fluid xs={12} md={12} xl={12}>
-        <Col className='contenedorHeader' xs={10} md={4} xl={4}>
-          <Row className='contenedorImagen'></Row>
+    <Container className='contenedor' fluid xs={12} md={12} xl={12}>
+
+        <Col className='contenedorHeader'>
+        {<div className="triangle">
           <Row className='contenedorPerfil'>
             {
               !datosCredencialesRedux.credentials?.token ? (
@@ -63,15 +64,17 @@ const Header = () => {
                 <>
                   <Col className='linkDesign' onClick={()=>navigate("/")}>Home</Col>
                   <Col className='linkDesign' onClick={()=>navigate("/profile")}>Perfil</Col>
-                  {datosCredencialesRedux.credentials?.rol === true && (<Col className='linlDesign' onClick={()=>navigate("/admin")}>Admin</Col>)}
-                  <Col className="linkDesign">{datosCredencialesRedux.credentials?.name}</Col>
+                  {datosCredencialesRedux.credentials?.rol === true && (
+                  <Col className='linkDesign' onClick={()=>navigate("/admin")}>Admin</Col>)}
                   <Col className="linkDesign" onClick={() => logOut()}>Logout</Col>
-                  <Col onClick={() => navigate("/fav")}><FavIcon/></Col>
+                  <Col className='linkDesign' onClick={() => navigate("/fav")}>Fav</Col>
                 </>
               )
             }
           </Row>
-          <Row className='contenedorLinks'></Row>
+          {/* <Row className='contenedorLinks'></Row> */}
+        </div>}
+
         </Col>
     </Container>
   )

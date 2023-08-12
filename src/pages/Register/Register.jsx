@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { Drop } from "../../common/Drop/Drop";
 import { TextInput } from "../../common/TextInput/TextInput";
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { registerMe } from "../../services/apiCalls";
+import './Register.css'
 
 export const Register = () => {
 
     const navigate = useNavigate();
-    const [drop, setDrop] = useState(false)
     const [userData, setUserData] = useState({
         id: 0,
         name: "",
@@ -16,14 +16,6 @@ export const Register = () => {
         age: 0,
         userID: 0
     })
-
-    useEffect(() => {
-        if(drop){
-            // console.log("Hombre");
-        }else{
-            // console.log("Mujer");
-        }
-    }, [drop]);
 
     useEffect(() => {
         // console.log(userData)
@@ -45,38 +37,40 @@ export const Register = () => {
 
     return(
         <>
-            <Drop state={setDrop} titulo={'Sexo: '}></Drop>
-            <TextInput
-            name="id"
-            type="text"
-            placeholder="write your id..."
-            state={setUserData}
-            />
+        <Container fluid className="contenedorRegistro">
             <TextInput
                 name="name"
                 type="text"
-                placeholder="write your name..."
+                placeholder="Nombre"
                 state={setUserData}
             />
             <TextInput
                 name="surname"
                 type="text"
-                placeholder="write your surname..."
+                placeholder="Apellidos"
                 state={setUserData}
             />
             <TextInput
                 name="age"
                 type="text"
-                placeholder="write your age..."
+                placeholder="Edad"
+                state={setUserData}
+            />
+            <TextInput
+                name="id"
+                type="text"
+                placeholder="ID"
                 state={setUserData}
             />
             <TextInput
                 name="userId"
                 type="text"
-                placeholder="write your userId..."
+                placeholder="Nº usuario"
                 state={setUserData}
             />
-            <Button onClick={()=>keepData()}>REGISTER ME!</Button>
+            <Button className="registrame" onClick={()=>keepData()}>ENVIAR</Button>
+        </Container>
+
         </>
     )
 }

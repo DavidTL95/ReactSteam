@@ -13,8 +13,8 @@ export const FavIcon = () => {
 
     return(
         <div className="contenedor">
-            <i className="bi bi-cart"></i>
-            {reduxFavData.items.length}
+            <p className="bi bi-cart">{reduxFavData.items.length}</p>
+            
         </div>
     )
 }

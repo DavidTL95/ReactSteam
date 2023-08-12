@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { TextInput } from "../../common/TextInput/TextInput";
 import { logMe } from "../../services/apiCalls";
 import { login, userData } from "../userSlice";
+import './Login.css'
 
 
 export const Login = () => {
@@ -53,7 +54,7 @@ export const Login = () => {
 
     return(
         <>
-      <Container fluid>
+      <Container fluid className="contenedor" xs={12} md={12} xl={12}>
         {welcome !== "" ? (
           <>
             <Row className="justify-content-center">
@@ -74,16 +75,16 @@ export const Login = () => {
                 <TextInput
                   name="email"
                   type="email"
-                  placeholder="write an email..."
+                  placeholder="Email"
                   state={setUserCredentials}
                 />
                 <TextInput
                   name="password"
                   type="password"
-                  placeholder="write a password..."
+                  placeholder="Contraseña"
                   state={setUserCredentials}
                 />
-                <Button onClick={(e) => submitHandler(e)}>log me!</Button>
+                <Button className="login" onClick={(e) => submitHandler(e)}>Login</Button>
               </Col>
             </Row>
           </>

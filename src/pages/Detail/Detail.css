@@ -1,17 +1,14 @@
-html {
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
 
   .contenedorDetail{
-    width: 90%;
-    height: 80%;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5rem;
+    margin-top: 2rem;
   }
   
-  .DetailCard {
+  .DetailCard, .DetailCardPrecios {
     display: flex;
     flex-direction: column;
     background-color: #a3a6e57b;
@@ -19,15 +16,15 @@ html {
     box-shadow: 2px 2px 15px #dcdde67b;
     overflow: hidden;
     transition: 0.5s;
+  }
 
-    width: 90%;
-    height: 70%;
-  
-    /* min-width: 350px;
-    min-height: 350px;
-    max-width: 350px;
-    max-height: 60%; */
-  
+  .DetailCardPrecios{
+    gap: 2rem;
+    padding: 2rem;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .DetailCard-header {
@@ -60,7 +57,7 @@ html {
     height: 100%;
     border: 5px solid #4e54c8;
     border-radius: 50%;
-    background-color: #ffffffe0;
+    background-color: #6283c54a;
     box-shadow: 0px -10px 20px #3cb4df;
     margin-top: -20px;
     color: #51cd3b;
@@ -73,44 +70,95 @@ html {
   
   .DetailCard-footer {
     display: flex;
-    height: 110px;
+    flex-direction: column;
     justify-content: space-around;
     color: #FFFFFF;
     font-size: 1.5rem;
-    margin: 1rem;
     gap: 1rem;
     align-items: center;
+    margin-top: 2rem;
   }
   
   .DetailCard-footer-precio {
     text-align: center;
     margin-top: 2rem;
-    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
   }
   
-  .precioRebajado{
+  .precioRebajadoPrecios{
     color: #51cd3b;
   }
   
-  .precioRebajado h3{
+  .precioRebajadoPrecios h3{
     transform: translateY(-1rem);
   }
   
-  .precioRebajado h4{
+  .precioRebajadoPrecios h4{
     transform: translateY(-1rem);
     font-size: 3rem;
   }
   
-  .preciOriginal h4{
+  .preciOriginalPrecios h4{
     text-decoration: line-through;
   }
-  
-  .card:hover {
-    transform: translateY(-20px);
-    transition: 0.5s;
-    background-color: #7f83c6c1;
+
+  .preciOriginalPrecios{
+    font-size: 2rem;
   }
+
+  .descuentoPrecios{
+    font-size: 2rem;
+  }
+
+  .favButton{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #dcdde67b;
+    border: 1px solid #4e54c8;
+  }
+
+  .favButton{
+    color: white;
+    font-size: 2rem;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #dcdde67b;
+    border: 1px solid #4e54c8;
+    transition: 0.25s;
+  }
+
+  .favButton:hover{
+    color: #4e54c8;
+    transition: 0.25s;
+    width: 110px;
+  }
+
+  .metacritic{
+    width: 50px;
+  }
+
+
+  @media (max-width: 800px) {
+    .contenedorDetail{
+      flex-direction: column;
+      /* margin-top: 5rem;
+      margin-bottom: 5rem;
+      height: 80%; */
+    }
   
-  .descuento {
-    border-right: none;
-  }/*# sourceMappingURL=DealCard.css.map */
+    .DetailCardPrecios{
+      flex-direction: row;
+      /* width: 90%; */
+      height: 20%;
+    }
+
+    .preciOriginalPrecios{
+      font-size: 1rem;
+    }
+  
+    .descuentoPrecios{
+      font-size: 1rem;
+    }
+  }

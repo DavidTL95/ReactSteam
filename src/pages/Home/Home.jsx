@@ -65,18 +65,19 @@ export const Home = () => {
   return (
 <Container fluid className="contenedorHome" xs={12} md={12} xl={12}>
 
-  {<section className="triangle">
-  <input
+  {/* {<section className="triangle">
+
+    </section>} */}
+
+<Row>
+</Row>
+      <input
       className="buscador"
       name="criteria"
       type="text"
       placeholder="Search..."
       onChange={inputHandler}
       />
-    </section>}
-
-<Row>
-</Row>
       <Row className="contenedorTarjetas">
         {/* {searchReduxData.findings.length > 0 ? (
           <>
