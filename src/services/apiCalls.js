@@ -68,3 +68,10 @@ export const modifyMe = async (id,body) => {
 
     return data;
 }
+
+export const getUsers = async () => {
+
+    let {data} = await axios.get(`${BASIC_API_URL}/users`);
+
+    return data;
+}

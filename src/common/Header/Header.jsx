@@ -23,7 +23,7 @@ const Header = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log("123456789ABCD", datosCredencialesRedux.credentials)
+    // console.log("123456789ABCD", datosCredencialesRedux.credentials)
   }, [datosCredencialesRedux])
 
   const logOut = () => {

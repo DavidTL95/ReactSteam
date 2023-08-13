@@ -17,10 +17,16 @@ export const userSlice = createSlice({
                 ...state,
                 ...action.payload
             }
+        },
+        remove: (state, action) => {
+            return{
+                ...state,
+                credentials: action.payload
+            }
         }
     }
 });
 
-export const { login, userout } = userSlice.actions;
+export const { login, userout, remove } = userSlice.actions;
 export const userData = (state) => state.user;
 export default userSlice.reducer;

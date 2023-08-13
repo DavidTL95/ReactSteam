@@ -64,13 +64,13 @@ export const Profile = () => {
                         <TextInput
                             name="surname"
                             type="text"
-                            placeholder="Apellidos"
+                            placeholder={userDataApi.surname}
                             state={setUserDataApi}
                         />
                         <TextInput
                             name="age"
                             type="text"
-                            placeholder="Edad"
+                            placeholder={userDataApi.name}
                             state={setUserDataApi}
                         />
                         <Button className="registrame" onClick={()=>keepData()}>ENVIAR</Button>
