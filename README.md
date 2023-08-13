@@ -52,7 +52,7 @@ Decidí crear una aplicación web para ayudar a los amantes de los videojuegos y
 5. npm run dev
 
 ## Vistas
-<div align="center" justify="center>
+<div align="center">
 Home
 ![2023-08-13 18-08-08](https://github.com/DavidTL95/ReactSteam/assets/134488502/f3b5c6de-fbf1-4d67-b3cc-93dc74c02296)
 Búsqueda
