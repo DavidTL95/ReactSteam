@@ -29,6 +29,7 @@ Decidí crear una aplicación web para ayudar a los amantes de los videojuegos y
 
 ## Stack
 <div align="center">
+
   ![HTML](https://github.com/DavidTL95/React-APP-The-Movie-Database/assets/134488502/5fe1620d-3d3a-4268-bf8b-fccc67fe857e)
   
   ![CSS3](https://github.com/DavidTL95/React-APP-The-Movie-Database/assets/134488502/e7c03987-ec35-4309-8f28-44bcf60ae731)
@@ -40,6 +41,7 @@ Decidí crear una aplicación web para ayudar a los amantes de los videojuegos y
   ![React](https://github.com/DavidTL95/React-APP-The-Movie-Database/assets/134488502/3964546f-171c-4d5d-bde0-e552ba53280d)
   
   ![Redux](https://github.com/DavidTL95/React-APP-The-Movie-Database/assets/134488502/ca286e09-0b1e-484c-95e2-c208935db81f)
+
 </div>
 
 ## Instalación en local
@@ -50,17 +52,17 @@ Decidí crear una aplicación web para ayudar a los amantes de los videojuegos y
 5. npm run dev
 
 ## Vistas
-Landing
-<img src="./images/landing.png">  
+Home
+ 
 Register
 <img src="./images/register.png">
 Login
 <img src="./images/login.png">
 Profile
 <img src="./images/profile.png">
-Routines
+Admin
 <img src="./images/routines.png">
-Exercices
+Favoritos
 <img src="./images/exercises.png">
 
 ## Licencia
@@ -73,7 +75,7 @@ Para conseguir mi objetivo he recopilado información de:
 
 ## Agradecimientos:
 
-Agradezco a mis compañeros el tiempo dedicado a este proyecto:
+Agradezco a mis compañeros y profesores el tiempo dedicado a este proyecto:
 
 - *Álvaro*  
 <a href="https://github.com/Roekan" target="_blank"><img src="https://img.shields.io/badge/github-24292F?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> 
