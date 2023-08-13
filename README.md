@@ -52,6 +52,7 @@ Decidí crear una aplicación web para ayudar a los amantes de los videojuegos y
 5. npm run dev
 
 ## Vistas
+<div align="center" justify="center>
 Home
 ![2023-08-13 18-08-08](https://github.com/DavidTL95/ReactSteam/assets/134488502/f3b5c6de-fbf1-4d67-b3cc-93dc74c02296)
 Búsqueda
@@ -66,6 +67,8 @@ Admin
 ![2023-08-13 18-10-09](https://github.com/DavidTL95/ReactSteam/assets/134488502/5aec7686-01f2-47cf-ad41-01dbfb19ccf4)
 Favoritos
 ![2023-08-13 18-08-51](https://github.com/DavidTL95/ReactSteam/assets/134488502/682f37f5-8dd8-427c-b415-203b05212ebe)
+
+</div>
 
 ## Licencia
 Este proyecto se encuentra bajo licencia de "David Torrado Lago"
