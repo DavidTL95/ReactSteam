@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { userData } from "../userSlice";
-import { profileUser } from "../../services/apiCalls";
+import { modifyMe, profileUser } from "../../services/apiCalls";
+import './Profile.css'
+import { Button, Container } from "react-bootstrap";
+import { TextInput } from "../../common/TextInput/TextInput";
 
 export const Profile = () => {
 
@@ -32,15 +35,53 @@ export const Profile = () => {
         }
     },[reduxUserCredentials])
 
+    const keepData = () => {
+        modifyMe(userDataApi.id,userDataApi)
+        .then(
+            res => {
+                if(res.id !== 0){
+                    setTimeout(() => {
+                        navigate("/login")
+                    }, 750);
+                }
+            }
+        )
+        .catch(error => console.log(error))
+    }
+
     return(
         <>
             {
                 userDataApi?.id !== 0
-
-                ? (<div>{userDataApi.name}</div>)
+                ? (
+                    <Container fluid className="contenedorRegistro">
+                        <TextInput
+                            name="name"
+                            type="text"
+                            placeholder={userDataApi.name}
+                            state={setUserDataApi}
+                        />
+                        <TextInput
+                            name="surname"
+                            type="text"
+                            placeholder="Apellidos"
+                            state={setUserDataApi}
+                        />
+                        <TextInput
+                            name="age"
+                            type="text"
+                            placeholder="Edad"
+                            state={setUserDataApi}
+                        />
+                        <Button className="registrame" onClick={()=>keepData()}>ENVIAR</Button>
+                    </Container>
+                    )
 
                 : (<div>No hay datos de perfil.</div>)
             }
+
+
+
         </>
     )
 

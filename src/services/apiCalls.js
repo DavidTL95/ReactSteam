@@ -62,17 +62,9 @@ export const profileUser = async (id) => {
     return data;
 }
 
-export const newOrder = async (productID, userID) => {
-    console.log(productID)
+export const modifyMe = async (id,body) => {
 
-    let body={
-        id:5,
-        userID: userID,
-        productID: productID,
-        date: "8/08/2023"
-    }
-
-    let {data} = await axios.post(`${BASIC_API_URL}/favorites`, body);
+    let {data} = await axios.put(`${BASIC_API_URL}/users/${id}`, body);
 
     return data;
 }

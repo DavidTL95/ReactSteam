@@ -1,0 +1,70 @@
+.container{
+    margin-top: 2rem;
+
+    font-size: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito{
+    width: 90%;
+
+    margin-top: 1rem;
+
+    gap: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #a3a6e57b;
+
+    font-size: 2rem;
+}
+
+.vaciar{
+    margin-top: 1rem;
+
+    width: 20%;
+    height: 20%;
+
+    border-radius: 30px;
+
+    background-color: #a3a6e57b;
+    border: 1px solid white;
+
+    font-size: 1.5rem;
+    color: white;
+
+    transition: 0.5s;
+}
+
+.vaciar:hover{
+    width: 25%;
+    color: red;
+    transition: 0.5s;
+}
+
+.vaciarUno{
+    width: 5%;
+    height: 20%;
+
+    border-radius: 30px;
+
+    background-color: #a3a6e57b;
+    border: 1px solid white;
+
+    font-size: 1.5rem;
+    color: white;
+
+    transition: 0.25s;
+}
+
+.vaciarUno:hover{
+    width: 6%;
+    color: red;
+    transition: 0.25s;
+}

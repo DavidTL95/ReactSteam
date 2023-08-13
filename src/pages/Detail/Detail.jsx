@@ -15,10 +15,6 @@ export const Detail = () => {
 
     const reduxDealData = useSelector(dealData);
 
-    console.log(reduxDealData)
-
-    console.log(reduxDealData)
-
     const reduxUserData = useSelector(userData);
 
     const dispatch = useDispatch();
