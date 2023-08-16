@@ -9,10 +9,8 @@ import "./Login.css";
 
 export const Login = () => {
   const navigate = useNavigate();
-
-  const reduxUserCredentials = useSelector(userData);
-
   const dispatch = useDispatch();
+  const reduxUserCredentials = useSelector(userData);
 
   const [userCredentials, setUserCredentials] = useState({
     email: "",
@@ -27,18 +25,32 @@ export const Login = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (userCredentials.email !== "") {
-      console.log(userCredentials);
-    }
-  }, [userCredentials]);
+  const logIn = () => {
+    logMe()
+      .then((res) => {
+        const userFound = res.find(
+          (element) =>
+            element.email == userCredentials.email &&
+            element.password == userCredentials.password
+        );
+
+        if (userFound) {
+          dispatch(login({ credentials: userFound }));
+          setTimeout(() => {
+            navigate("/");
+          }, 750);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   const submitHandler = (e) => {
     // e.prevenDefault();
 
     logMe(userCredentials)
       .then((res) => {
-        console.log(res);
         dispatch(login({ credentials: res }));
 
         setWelcome(res.name);
@@ -87,7 +99,7 @@ export const Login = () => {
                   placeholder="Contraseña"
                   state={setUserCredentials}
                 />
-                <Button className="login" onClick={(e) => submitHandler(e)}>
+                <Button className="login" onClick={logIn()}>
                   Login
                 </Button>
               </Col>

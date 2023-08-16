@@ -52,13 +52,23 @@ export const Register = () => {
           placeholder="Edad"
           state={setUserData}
         />
-        <TextInput name="id" type="text" placeholder="ID" state={setUserData} />
         <TextInput
-          name="userId"
+          name="email"
           type="text"
-          placeholder="Nº usuario"
+          placeholder="Email"
           state={setUserData}
         />
+        <TextInput
+          name="password"
+          type="text"
+          placeholder="Contraseña"
+          state={setUserData}
+        />
+        <TextInput 
+        name="id" 
+        type="text" 
+        placeholder="ID" 
+        state={setUserData} />
         <Button className="registrame" onClick={() => keepData()}>
           ENVIAR
         </Button>

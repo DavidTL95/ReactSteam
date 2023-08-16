@@ -37,15 +37,17 @@ export const getDealsByID = async (id) => {
 
 export const logMe = async (body) => {
 
-    let res = {
-        token: "123456789ABCD",
-        name: "David",
-        id: 1,
-        age: 27,
-        rol: true
-    }
+    // let data = {
+    //     token: "123456789ABCD",
+    //     name: "David",
+    //     id: 1,
+    //     age: 27,
+    //     rol: true
+    // }
 
-    return res;
+    let {data} = await axios.get(`${BASIC_API_URL}/users`);
+
+    return data;
 }
 
 export const registerMe = async (body) => {

@@ -48,22 +48,39 @@ export const Profile = () => {
     <>
       {userDataApi?.id !== 0 ? (
         <Container fluid className="contenedorRegistro">
+          <h1>Nombre</h1>
           <TextInput
             name="name"
             type="text"
             placeholder={userDataApi.name}
             state={setUserDataApi}
           />
+          <h1>Apellidos</h1>
           <TextInput
             name="surname"
             type="text"
             placeholder={userDataApi.surname}
             state={setUserDataApi}
           />
+          <h1>Edad</h1>
           <TextInput
             name="age"
             type="text"
-            placeholder={userDataApi.name}
+            placeholder={userDataApi.age}
+            state={setUserDataApi}
+          />
+          <h1>Email</h1>
+          <TextInput
+            name="email"
+            type="text"
+            placeholder={userDataApi.email}
+            state={setUserDataApi}
+          />
+          <h1>Contraseña</h1>
+          <TextInput
+            name="password"
+            type="text"
+            placeholder={userDataApi.password}
             state={setUserDataApi}
           />
           <Button className="registrame" onClick={() => keepData()}>
