@@ -6,7 +6,7 @@ const URLByTitle = ('https://www.cheapshark.com/api/1.0/deals?title=')
 
 const URLByID = ('https://www.cheapshark.com/api/1.0/games?id=')
 
-const BASIC_API_URL = "http://localhost:3000";
+const BASIC_API_URL = "https://react-steam-server.vercel.app";
 
 
 
