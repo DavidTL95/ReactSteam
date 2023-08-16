@@ -53,20 +53,26 @@ Decidí crear una aplicación web para ayudar a los amantes de los videojuegos y
 
 ## Vistas
 
+Home
+![Home](https://github.com/DavidTL95/ReactSteam/assets/134488502/0144a777-cead-4604-b33a-7fc9dc7e7b7f)
 
-![2023-08-13 18-08-08](https://github.com/DavidTL95/ReactSteam/assets/134488502/f3b5c6de-fbf1-4d67-b3cc-93dc74c02296)
+Búsqueda
+![Busqueda](https://github.com/DavidTL95/ReactSteam/assets/134488502/aec066e4-f1c1-44d3-bc4b-7680cb4b0ab2)
 
-![2023-08-13 18-08-21](https://github.com/DavidTL95/ReactSteam/assets/134488502/0118272f-7021-4188-90e6-4d47e867d1da)
+Detalle
+![Detalle](https://github.com/DavidTL95/ReactSteam/assets/134488502/ec1d4869-55be-4ef1-a44b-73463632b0a0)
 
-![2023-08-13 18-09-18](https://github.com/DavidTL95/ReactSteam/assets/134488502/478b0a38-d6f9-4c51-9de8-e63ad98ea98f)
+Favoritos
+![Favoritos](https://github.com/DavidTL95/ReactSteam/assets/134488502/d0309ccf-08b0-40e6-8726-a09fdbb025a9)
 
-![2023-08-13 18-08-35](https://github.com/DavidTL95/ReactSteam/assets/134488502/b19422fd-2e3e-4309-86ab-fedf41f41ca2)
+Login
+![Login](https://github.com/DavidTL95/ReactSteam/assets/134488502/30b6a6e7-09c5-4fcb-bb7d-f46cc2b815b9)
 
-![2023-08-13 18-09-06](https://github.com/DavidTL95/ReactSteam/assets/134488502/9f8ee434-b451-4fe2-8ca7-3b5159fd7f2c)
+Perfil
+![Perfil](https://github.com/DavidTL95/ReactSteam/assets/134488502/1cf36cd4-b5aa-402c-b83a-73fd1f24ff4f)
 
-![2023-08-13 18-10-09](https://github.com/DavidTL95/ReactSteam/assets/134488502/5aec7686-01f2-47cf-ad41-01dbfb19ccf4)
-
-![2023-08-13 18-08-51](https://github.com/DavidTL95/ReactSteam/assets/134488502/682f37f5-8dd8-427c-b415-203b05212ebe)
+Admin
+![Admin](https://github.com/DavidTL95/ReactSteam/assets/134488502/a2b0d099-d010-428f-8f4d-33c5de76109b)
 
 ## Licencia
 Este proyecto se encuentra bajo licencia de "David Torrado Lago"
